@@ -8,7 +8,7 @@ class Formatter {
   static titleize(str){
    const exceptions = ['the','a', 'an', 'but', 'of', 'and', 'for', 'at','by','from']
 
-    let myStr = string.split(" ");
+    let myStr = str.split(" ");
     let word = [];
 
     myStr.map(function(word){
