@@ -9,13 +9,13 @@ class Formatter {
    const exceptions = ['the','a', 'an', 'but', 'of', 'and', 'for', 'at','by','from']
 
     let myStr = str.split(" ");
-    let word = [];
+    let arr = [];
 
     myStr.map(function(word){
       if(exceptions.includes(word) === false){
-        word.push(this.capitalize(word));
+        arr.push(this.capitalize(word));
       } else {
-        word.push(word);
+        arr.push(word);
       }
     })
     return this.capitalize(word.join(" "));
