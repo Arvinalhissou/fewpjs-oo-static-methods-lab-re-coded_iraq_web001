@@ -8,7 +8,7 @@ class Formatter {
   static titleize(str){
    const exceptions = ["of", "the", "a", "an", "and", "but", "for", "at", "by", "from"]
 
-    return string.split(" ").map((word, index)=> { 
+    return str.split(" ").map((word, index)=> { 
       if (index !== 0 && exceptions.includes(word)) {
         return word
       } else {
