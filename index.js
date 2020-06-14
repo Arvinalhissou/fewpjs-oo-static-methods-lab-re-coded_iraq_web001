@@ -6,15 +6,14 @@ class Formatter {
    return str.replace(/[^A-Za-z0-9-']+/g, '');
 }
   static titleize(str){
-   const exemptions = ["of", "the", "a", "an", "and", "but", "for", "at", "by", "from"]
+   const exceptions = ["of", "the", "a", "an", "and", "but", "for", "at", "by", "from"]
 
-    return string.split(" ").map(function(word, index) { 
-      if (index !== 0 && exemptions.includes(word)) {
+    return string.split(" ").map((word, index)=> { 
+      if (index !== 0 && exceptions.includes(word)) {
         return word
       } else {
         return this.capitalize(word)
       }
-    return finalStr.join(' ')
   }
   
   )}
