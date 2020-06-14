@@ -6,19 +6,16 @@ class Formatter {
    return str.replace(/[^A-Za-z0-9-']+/g, '');
 }
   static titleize(str){
-    let finalStr = []
-    let nonCap = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
-    let newStr = str.split(' ')
-    finalStr.push(Formatter.capitalize(newStr[0]))
-    for(let i = 1; i < newStr.length; i++){
-      if(nonCap.includes(newStr[i]) === false) {
-        finalStr.push(Formatter.capitalize(newStr[i]))
-      }else {
-        finalStr.push(newStr[i])
+   const exemptions = ["of", "the", "a", "an", "and", "but", "for", "at", "by", "from"]
+
+    return string.split(" ").map(function(word, index) { 
+      if (index !== 0 && exemptions.includes(word)) {
+        return word
+      } else {
+        return this.capitalize(word)
       }
-    }
     return finalStr.join(' ')
   }
-  }
+  
   
 }
