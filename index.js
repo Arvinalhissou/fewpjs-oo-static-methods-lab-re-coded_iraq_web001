@@ -13,11 +13,11 @@ class Formatter {
 
     myStr.map(function(word){
       if(exceptions.includes(word) === false){
-        word.push(Formatter.capitalize(word));
+        word.push(this.capitalize(word));
       } else {
         word.push(word);
       }
     })
-    return Formatter.capitalize(word.join(" "));
+    return this.capitalize(word.join(" "));
   }
 }
