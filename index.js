@@ -11,7 +11,7 @@ class Formatter {
     let myStr = str.split(" ");
     let arr = [];
 
-    myStr.map(function(word){
+    myStr.map(word=>{
       if(exceptions.includes(word) === false){
         arr.push(Formatter.capitalize(word));
       } else {
