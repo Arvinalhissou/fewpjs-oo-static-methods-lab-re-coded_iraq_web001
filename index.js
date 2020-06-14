@@ -8,15 +8,16 @@ class Formatter {
   static titleize(str){
    const exceptions = ['the','a', 'an', 'but', 'of', 'and', 'for', 'at','by','from']
 
-    return str.split(" ").map((word, index)=> { 
-      if (index !== 0 && exceptions.includes(word)) {
-        return word
-      } else {
-        return this.capitalize(word)
-      }
-      this.capitalize(word).join(" ")
+    let strArr = string.split(" ");
+    let finalString = [];
 
-  }
-  
-  )}
+    strArr.map(function(word){
+      if(words.includes(word) === false){
+        finalString.push(Formatter.capitalize(word));
+      } else {
+        finalString.push(word);
+      }
+    })
+    return Formatter.capitalize(finalString.join(" "));
+  };
 }
