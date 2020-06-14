@@ -19,5 +19,5 @@ class Formatter {
       }
     })
     return Formatter.capitalize(word.join(" "));
-  };
+  }
 }
