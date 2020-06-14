@@ -17,5 +17,5 @@ class Formatter {
     return finalStr.join(' ')
   }
   
-  
+  )}
 }
