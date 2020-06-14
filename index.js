@@ -14,6 +14,8 @@ class Formatter {
       } else {
         return this.capitalize(word)
       }
+      this.capitalize(word).join(" ")
+
   }
   
   )}
